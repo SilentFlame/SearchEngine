@@ -52,3 +52,7 @@
 #### Future Work ####
 - can use semantics to get more favourable words related to a word in the query.
 - Specific to feild query cases to be handled.
+
+-----
+##### Discussions #####
+` Join [here](https://gitter.im/IndexingDiscussion) for discussions and doubts regarding the workflow of the system.`
