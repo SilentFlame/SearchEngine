@@ -1,6 +1,6 @@
 import math
 
-from search import CreateIndex
+from createIndex import CreateIndex
 
 query_document_relevance = {}
 ideal_ndcg = {}
