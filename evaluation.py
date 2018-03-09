@@ -1,7 +1,6 @@
 import math
 
-from readers import read_relevance, read_queries
-from search import search_query
+from search import CreateIndex
 
 query_document_relevance = {}
 ideal_ndcg = {}
@@ -50,8 +49,10 @@ if __name__ == '__main__':
     ideal_ndcg_queries()
     sum = 0.0
     all_queries = [query for query in read_queries() if query['query number'] != 0]
+    I = CreateIndex()
+    I.createIndex()
     for query in all_queries:
-        documents = search_query(query)
+        documents = I.resultDocIds(query)
         assert len(documents)==len(set(documents)), "Search results should not have duplicates:"+str(documents)
         if len(documents) > 0:
             print "Query:{} and Results:{}".format(query, documents)
